@@ -2,11 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task Management App</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between mb-3">
+            <button id="create-task-btn" class="btn btn-primary">Create Task</button>
+            <div id="points" class="font-weight-bold text-danger">
+                <span id="points-icon">🎁</span>
+                <span id="points-value">Points: 0</span>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header font-weight-bold">Pending</div>
+            <div id="task-list-pending" class="list-group list-group-flush"></div>
+        </div>
+        <div class="card">
+            <div class="card-header font-weight-bold">Completed</div>
+            <div id="task-list-completed" class="list-group list-group-flush"></div>
+        </div>
+    </div>
+    <div id="popup-form" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create Task</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="task-name">Task Name</label>
+                            <input type="text" class="form-control" id="task-name" placeholder="Enter task name">
+                        </div>
+                        <div class="form-group">
+                            <label for="task-points">Points</label>
+                            <input type="number" class="form-control" id="task-ppoints" placeholder="Enter points">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" id="submit-task-btn" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" class="overlay hidden"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
