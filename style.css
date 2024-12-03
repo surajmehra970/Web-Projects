@@ -1,0 +1,43 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    margin: 0;
+    padding: 0;
+}
+
+#points {
+    font-size: 1.5em;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ff7e5f;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.modal-content {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border-radius: 10px;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+button.btn-primary {
+    background: none;
+    border: 1px solid #007bff;
+    color: #007bff;
+}
+
+button.close {
+    background: none;
+    border: none;
+    color: black;
+}
+
+button:hover {
+    opacity: 0.8;
+}
